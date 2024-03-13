@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body>
+  <div class="bg-black w-screen h-screen flex justify-center ">
+    <div class=" flex flex-col w-1/2 h-5/6 bg-white translate-y-20" >
+      <span class="bg-yellow-200 text-2xl text-black font-semibold p-5 ">We appreciate your feedback !</span>
+
+      <form action="" method="Post" class=" w-full space-y-12  p-8">
+          {% csrf_token %}
+        <div class="grid md:grid-cols-2 translate-x-10 ">
+          <div class="relative">
+            <div class="absolute -top-[10px] px-1 start-5 flex items-center bg-white pointer-events-none">
+              <span name ="First_Name" class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">First Name</span>
+            </div>
+            <input class=" text-gray-900 text-sm  outline-none focus:ring-2 focus:ring-blue-200 block ring-2 ring-gray-200 w-80 ps-10 p-2.5">
+          </div>
+
+          <div class="relative">
+            <div class="absolute -top-[10px] px-1 start-5 flex items-center bg-white pointer-events-none">
+              <span name="Last_Name" class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">Last Name</span>
+            </div>
+            <input class="text-gray-900 text-sm  outline-none focus:ring-2 focus:ring-blue-200 block ring-2 ring-gray-200 w-80 ps-10 p-2.5">
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 translate-x-10 ">
+          <div class="relative">
+            <div class="absolute -top-[10px] px-1 start-5 flex items-center bg-white pointer-events-none">
+              <span name="Email" class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">Email</span>
+            </div>
+            <input class=" text-gray-900 text-sm  outline-none focus:ring-2 focus:ring-blue-200 block ring-2 ring-gray-200 w-80 ps-10 p-2.5">
+          </div>
+
+          <div class="relative">
+            <div class="absolute -top-[10px] px-1 start-5 flex items-center bg-white pointer-events-none">
+              <span name="Phone" class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">Phone</span>
+            </div>
+            <input class="text-gray-900 text-sm  outline-none focus:ring-2 focus:ring-blue-200 block ring-2 ring-gray-200 w-80 ps-10 p-2.5">
+          </div>
+        </div>
+
+        <div class="translate-x-10  w-5/6 p-2 ">
+          <div class="space-y-3">
+            <P class="text-black text-lg">Food Quality</P>
+            <div class="space-x-10">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300  rounded-full  peer-checked:after:translate-x-full  peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 ">Excellent</span>
+              </label>
+
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300">Good</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300">Average</span>
+              </label>
+
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300">Dissatisfied</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="space-y-3 mt-8">
+            <P class="text-black text-lg">Overall Services Quality </P>
+            <div class="space-x-10">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 ">Excellent</span>
+              </label>
+
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300">Good</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300">Average</span>
+              </label>
+
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300">Dissatisfied</span>
+              </label>
+            </div>
+          </div>
+
+          <div class=" space-y-3 mt-8">
+            <P class="text-black text-lg">Cleanliness </P>
+            <div class="space-x-10">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 ">Excellent</span>
+              </label>
+
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300">Good</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300">Average</span>
+              </label>
+
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" value="" class="sr-only peer">
+                <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                <span class="ms-3 text-base font-medium text-gray-900 dark:text-gray-300">Dissatisfied</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative translate-x-10">
+          <div class="absolute -top-[12px] px-1 start-5 flex items-center bg-white pointer-events-none">
+            <span class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">Message</span>
+          </div>
+          <input class="text-gray-900 text-sm rounded-xl outline-none focus:ring-2 focus:ring-blue-200 ring-2 ring-gray-200  block w-3/4 h-12 ps-10 p-2.5">
+        </div>
+      </form>
+
+      <div class="relative  flex justify-center">
+        <a href="/dashboard/" class="w-1/3 h-12 bg-indigo-500 rounded-lg hover:bg-blue-700  font-normal text-lg text-white">Submit</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

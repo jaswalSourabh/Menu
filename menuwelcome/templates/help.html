@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="tailwind.config.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+
+<body>
+    <div class=" relative bg-sky-800 h-screen w-screen flex justify-center">
+        <a href="/dashboard/" class="absolute top-0 right-0 p-4">
+            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+            </svg>
+        </a>
+        <div class=" absolute flex-col top-28  left-60">
+            <div class="flex-col space-y-2">
+                <span class="text-4xl font-bold text-white">Help & Support</span>
+                <p class="text-white">Let's take Step Ahead And Help You Better</p>
+            </div>
+
+            <form class="max-w-max mx-auto absolute top-40 p-8 py-10 shadow-xl bg-white rounded ">
+                <div class="grid md:grid-cols-2 md:gap-20 mb-10">
+                    <div class="relative">
+                        <div class="absolute -top-[10px] px-1 start-5 flex items-center bg-white pointer-events-none">
+                            <span class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">First Name</span>
+                        </div>
+                        <input name="First_Name" class=" text-gray-900 text-sm rounded-xl outline-none focus:ring-2 focus:ring-blue-200 block ring-2 ring-gray-200 w-50 ps-10 p-2.5">
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -top-[10px] px-1 start-5 flex items-center bg-white pointer-events-none">
+                            <span class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">Last Name</span>
+                        </div>
+                        <input name="Last_Name" class="text-gray-900 text-sm rounded-xl outline-none focus:ring-2 focus:ring-blue-200 block ring-2 ring-gray-200 w-50 ps-10 p-2.5">
+                    </div>
+                </div>
+
+                <div class="relative mt-16">
+                    <div class="absolute -top-[12px] px-1 start-5 flex items-center bg-white pointer-events-none">
+                        <span class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">Phone Number</span>
+                    </div>
+                    <input  name="Phone" class="text-gray-900 text-sm rounded-xl outline-none focus:ring-2 focus:ring-blue-200 ring-2 ring-gray-200 block w-[500px] ps-10 p-2.5">
+                </div>
+
+                <div class="relative mt-16">
+                    <div class="absolute -top-[12px] px-1 start-5 flex items-center bg-white pointer-events-none">
+                        <span class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">Email</span>
+                    </div>
+                    <input name="Email" class="text-gray-900 text-sm rounded-xl outline-none focus:ring-2 focus:ring-blue-200 ring-2 ring-gray-200 block w-[500px] ps-10 p-2.5">
+                </div>
+
+                <div class="relative mt-16">
+                    <div class="absolute -top-[12px] px-1 start-5 flex items-center bg-white pointer-events-none">
+                        <span class="left-1 text-gray-400 text-xs bg-white ml-2 max-w-max">Message</span>
+                    </div>
+                    <input name="Message" class="text-gray-900 text-sm rounded-xl outline-none focus:ring-2 focus:ring-blue-200 ring-2 ring-gray-200  block w-[500px]  h-24 ps-10 p-2.5">
+                </div>
+
+                <div class="relative mt-10 flex justify-center">
+                    <a href="dashboard/" class="w-1/2 h-12 bg-indigo-500 rounded-lg hover:bg-blue-700  font-normal text-lg text-white">Submit</a>
+                </div>
+
+                <span class="text-black font-semibold relative top-6 ">Call on : <a class="text-red-400 font-semibold underline underline-offset-2">9876733151 / 9727232762</a></span>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
